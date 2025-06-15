@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ${navCSS}
     <nav class="navbar">
       <ul class="nav-menu">
-        <li><a href="${rootPrefix}index.html" style="text-decoration: none; color: var(--link-color); font-weight: bold;">Home</a></li>
+        <li><a href="${rootPrefix}home.html" style="text-decoration: none; color: var(--link-color); font-weight: bold;">Home</a></li>
         <li><a href="${rootPrefix}about.html" style="text-decoration: none; color: var(--link-color); font-weight: bold;">About</a></li>
         <li class="nav-dropdown">
           <a href="${rootPrefix}research/index.html" style="text-decoration: none; color: var(--link-color); font-weight: bold;">Research</a>

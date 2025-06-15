@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="base-url" content="">
     <title>DPKG and BASH Installs</title>
-    <script src="/js/utils/base-url.js"></script>
+    <link rel="stylesheet" href="/assets/highlight-js/styles/github-dark.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/utils/base-url.js"></script>
     <script src="/js/theme-toggle.js" defer></script>
+    <script src="/js/navigation/ubuntu-nav.js" defer></script>
+    <script src="/js/components/mathjax-config.js" defer></script>
     <script src="/js/nav.js" defer></script>
     <script src="/js/page-nav.js" defer></script>
     <script src="/js/page-title.js" defer></script>
     <script src="/js/sub-toc.js" defer></script>
-    <script src="/js/mathjax-config.js" defer></script>
-    <link rel="stylesheet" href="/assets/highlight-js/styles/github-dark.min.css">
     <script src="/assets/highlight-js/highlight.min.js"></script>
     <!-- Load common language support -->
     <script src="/assets/highlight-js/languages/python.min.js"></script>
-    <script src="/assets/highlight-js/languages/javascript.min.js"></script>
     <script src="/assets/highlight-js/languages/bash.min.js"></script>
-    <script src="/assets/highlight-js/languages/xml.min.js"></script>
-    <script src="/assets/highlight-js/languages/css.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             hljs.highlightAll();
@@ -30,15 +28,15 @@
 <body>
     <div id="nav-container"></div>
     <main>
+        <!-- Title -->
         <h1 data-use-title="full"></h1>
-        
         <!-- Sub-TOC for current page only -->
         <div id="sub-toc">
             <!-- This will be filled by sub-toc.js -->
         </div>
         
         <p>To install packages using DPKG, you can use the following command:</p>
-        <pre>sudo dpkg -i package_name.deb</pre>
+        <pre><code class="language-bash">sudo dpkg -i package_name.deb</code></pre>
         <p>Make sure to replace <code>package_name.deb</code> with the actual name of the package you want to install.</p>
 
         <section id="web-browsers">
@@ -56,11 +54,11 @@
                 <li>
                     <code>conda</code>: Anaconda package manager for Python. Visit <a href="https://www.anaconda.com/">Anaconda</a> for more information.
                     In this case we need to run a <code>.sh</code> script so after downloading an installer such as <code>Anaconda3-&lt;version&gt;-Linux-x86_64.sh</code> just make it executable with
-                    <pre>chmod +x Anaconda3-&lt;version&gt;-Linux-x86_64.sh</pre>
+                    <pre><code class="language-bash">chmod +x Anaconda3-&lt;version&gt;-Linux-x86_64.sh</code></pre>
                     and then run it with
-                    <pre>./Anaconda3-&lt;version&gt;-Linux-x86_64.sh</pre>
+                    <pre><code class="language-bash">./Anaconda3-&lt;version&gt;-Linux-x86_64.sh</code></pre>
                     If you want to install it in a specific directory, you can specify the path during the installation process, but at the end you would need to add the Anaconda path to your <code>.bashrc</code> file:
-                    <pre>export PATH="/path/to/anaconda3/bin:$PATH"</pre>
+                    <pre><code class="language-bash">export PATH="/path/to/anaconda3/bin:$PATH"</code></pre>
                 </li>
             </ul>
         </section>
@@ -68,14 +66,14 @@
         <section id="other-apps">
             <h2>Other Applications</h2>
             <ul>
-                <li><code>slack-desktop</code>: Team collaboration tool.</li>
                 <li><code>discord</code>: Voice, video, and text communication service.</li>
+                <li><code>teamviewer</code>: Remote desktop software for remote control, desktop sharing, online meetings, and file transfer.</li>
             </ul>
         </section>
 
-<pre><code class="language-python">
+<pre><code class="language-python"># more python
 def foo():
-    return 42
+    return 42 + 4
 </code></pre>
     </main>
 </body>

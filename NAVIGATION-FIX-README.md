@@ -40,7 +40,7 @@ All pages now have the following structure:
 
 These pages should have working navigation:
 
-- index.html
+- home.html
 - about.html
 - projects.html
 - contact.html

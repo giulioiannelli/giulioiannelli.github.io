@@ -11,6 +11,7 @@
 @import 'components/code.css';
 @import 'components/images.css';
 @import 'components/blockquote.css';
+@import 'components/highlight-custom.css';
 @import 'layouts/toc.css';
 @import 'pages/research.css';
 

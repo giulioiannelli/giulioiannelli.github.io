@@ -30,8 +30,8 @@ function createNavigation() {
   
   // Create logo/site name link
   const siteTitle = document.createElement('a');
-  siteTitle.href = rootPrefix + 'index.html';
-  siteTitle.textContent = 'Giulio Iannelli';
+  siteTitle.href = rootPrefix + 'home.html';
+  siteTitle.textContent = 'Giulio\'s Digital Den';
   siteTitle.classList.add('site-title');
   
   // Create the menu
@@ -40,7 +40,7 @@ function createNavigation() {
   
   // Define navigation links
   const navLinks = [
-    { href: 'index.html', text: 'Home' },
+    { href: 'home.html', text: 'Home' },
     { href: 'about.html', text: 'About' },
     { href: 'research/', text: 'Research' },
     { href: 'projects.html', text: 'Projects' },

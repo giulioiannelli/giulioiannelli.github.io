@@ -1,0 +1,16 @@
+/* Custom highlight.js theme adjustments to match site theme */
+
+/* Override the background color of highlight.js to match the site's code background */
+.hljs {
+  background: var(--code-bg) !important; /* Use the site's code background variable */
+}
+
+/* Ensure pre elements with hljs also use the correct background */
+pre code.hljs {
+  background: var(--code-bg) !important;
+}
+
+/* Remove any built-in padding/margin to match our site styling */
+pre code.hljs {
+  padding: 0 !important;
+}
