@@ -6,9 +6,35 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/image-styles.css">
-    <script src="js/theme-toggle.js" defer></script>
-    <script src="js/nav.js" defer></script>
-    <script src="js/mathjax-config.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script>
+        // Fallback navigation in case external scripts fail
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                if (!document.querySelector('.navbar')) {
+                    console.log("Creating fallback navigation");
+                    const navbar = document.createElement('div');
+                    navbar.className = 'navbar';
+                    navbar.innerHTML = '<a href="index.html">Giulio Iannelli</a>' + 
+                                      '<ul class="nav-menu">' +
+                                      '<li><a href="index.html">Home</a></li>' +
+                                      '<li><a href="about.html">About</a></li>' +
+                                      '<li><a href="research/">Research</a></li>' +
+                                      '<li><a href="projects.html">Projects</a></li>' +
+                                      '<li><a href="utils/">Utils</a></li>' +
+                                      '<li><a href="contact.html">Contact</a></li>' +
+                                      '</ul>';
+                    
+                    const navContainer = document.getElementById('nav-container');
+                    if (navContainer) {
+                        navContainer.appendChild(navbar);
+                    } else {
+                        document.body.insertBefore(navbar, document.body.firstChild);
+                    }
+                }
+            }, 500); // Wait for external scripts to try loading first
+        });
+    </script>
 </head>
 <body>
     <div id="nav-container"></div>
