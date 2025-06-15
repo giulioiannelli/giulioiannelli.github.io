@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using MathJax</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/nav.js" defer></script>
+    <script src="js/page-title.js" defer></script>
+    <script src="js/mathjax-config.js" defer></script>
+</head>
+<body>
+    <div id="nav-container"></div>
+    <main>
+        <h1 data-use-title="full">Using MathJax</h1>
+        
+        <div class="table-of-contents">
+            <ul>
+                <li><strong>On This Page</strong></li>
+                <li><a href="#basics">MathJax Basics</a></li>
+                <li><a href="#inline">Inline Math</a></li>
+                <li><a href="#display">Display Math</a></li>
+                <li><a href="#advanced">Advanced Features</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </div>
+        
+        <section id="basics">
+            <h2>MathJax Basics</h2>
+            <p>
+                MathJax is enabled across all pages of this website. This allows you to include mathematical equations and expressions in your content using LaTeX notation. Here's how to use it:
+            </p>
+            
+            <ul>
+                <li>For inline equations, use <code>$...$</code> or <code>\(...\)</code></li>
+                <li>For display equations, use <code>$$...$$</code> or <code>\[...\]</code></li>
+                <li>Standard LaTeX math commands are supported</li>
+                <li>For multi-line equations, use LaTeX environments like <code>aligned</code>, <code>gather</code>, etc.</li>
+            </ul>
+        </section>
+        
+        <section id="inline">
+            <h2>Inline Math</h2>
+            <p>
+                Inline equations are embedded directly within text. For example, typing <code>$E=mc^2$</code> will render as $E=mc^2$.
+            </p>
+            
+            <h3>Examples:</h3>
+            <ul>
+                <li>The Pythagorean theorem: $a^2 + b^2 = c^2$</li>
+                <li>The area of a circle: $A = \pi r^2$</li>
+                <li>The derivative of a function: $\frac{df}{dx} = \lim_{h \to 0}\frac{f(x+h) - f(x)}{h}$</li>
+                <li>Euler's identity: $e^{i\pi} + 1 = 0$</li>
+            </ul>
+        </section>
+        
+        <section id="display">
+            <h2>Display Math</h2>
+            <p>
+                Display equations stand alone in their own block and are centered. Use them for more complex or important equations that deserve their own space.
+            </p>
+            
+            <p>Example of a display equation (Maxwell's first equation):</p>
+            
+            <div class="mathjax">
+            $$\nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}$$
+            </div>
+            
+            <p>Multi-line aligned equations:</p>
+            
+            <div class="mathjax">
+            $$\begin{aligned}
+            (a+b)^2 &= (a+b)(a+b)\\
+            &= a(a+b) + b(a+b)\\
+            &= a^2 + ab + ba + b^2\\
+            &= a^2 + 2ab + b^2
+            \end{aligned}$$
+            </div>
+        </section>
+        
+        <section id="advanced">
+            <h2>Advanced Features</h2>
+            
+            <h3>Matrices</h3>
+            <div class="mathjax">
+            $$\begin{pmatrix}
+            a & b & c \\
+            d & e & f \\
+            g & h & i
+            \end{pmatrix}$$
+            </div>
+            
+            <h3>Fractions and Binomials</h3>
+            <div class="mathjax">
+            $$\frac{n!}{k!(n-k)!} = \binom{n}{k}$$
+            </div>
+            
+            <h3>Integrals and Summations</h3>
+            <div class="mathjax">
+            $$\int_{a}^{b} f(x) \, dx = \sum_{i=1}^{n} f(x_i) \, \Delta x$$
+            </div>
+            
+            <h3>Greek Letters</h3>
+            <p>
+                Lowercase: $\alpha, \beta, \gamma, \delta, \epsilon, \zeta, \eta, \theta, \ldots$
+            </p>
+            <p>
+                Uppercase: $\Gamma, \Delta, \Theta, \Lambda, \Xi, \Pi, \Sigma, \Phi, \Psi, \Omega$
+            </p>
+        </section>
+        
+        <section id="references">
+            <h2>References</h2>
+            <ul>
+                <li><a href="https://www.mathjax.org/" target="_blank">MathJax Official Website</a></li>
+                <li><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank">MathJax Basic Tutorial and Quick Reference</a></li>
+                <li><a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics" target="_blank">LaTeX Mathematics on Wikibooks</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

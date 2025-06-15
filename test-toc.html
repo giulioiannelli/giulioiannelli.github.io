@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test TOC</title>
+    <style>
+        /* Basic styling for demonstration */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Test variations of nested lists */
+        .test1 ul ul {
+            color: blue;
+            border: 1px solid red;
+        }
+        
+        .test2 li ul {
+            color: green;
+            border: 1px solid purple;
+        }
+        
+        .test3 > ul > li > ul {
+            color: orange;
+            border: 1px solid brown;
+        }
+    </style>
+    <script src="../js/mathjax-config.js" defer></script>
+</head>
+<body>
+    <h1>TOC Test Page</h1>
+    
+    <h2>Test 1: Basic Nested ULs</h2>
+    <div class="test1">
+        <ul>
+            <li>Main Item 1</li>
+            <li>
+                Main Item 2
+                <ul>
+                    <li>Sub Item 2.1</li>
+                    <li>Sub Item 2.2</li>
+                </ul>
+            </li>
+            <li>Main Item 3</li>
+        </ul>
+    </div>
+    
+    <h2>Test 2: LI > UL Selector</h2>
+    <div class="test2">
+        <ul>
+            <li>Main Item 1</li>
+            <li>
+                Main Item 2
+                <ul>
+                    <li>Sub Item 2.1</li>
+                    <li>Sub Item 2.2</li>
+                </ul>
+            </li>
+            <li>Main Item 3</li>
+        </ul>
+    </div>
+    
+    <h2>Test 3: Direct Child Selectors</h2>
+    <div class="test3">
+        <ul>
+            <li>Main Item 1</li>
+            <li>
+                Main Item 2
+                <ul>
+                    <li>Sub Item 2.1</li>
+                    <li>Sub Item 2.2</li>
+                </ul>
+            </li>
+            <li>Main Item 3</li>
+        </ul>
+    </div>
+
+    <h2>Your Current TOC Structure</h2>
+    <div class="table-of-contents">
+        <ul>
+            <li><strong>Overview</strong></li>
+            <li>
+                <a href="#">APT Installs</a>
+                <ul>
+                    <li><a href="#">Essential Tools</a></li>
+                    <li><a href="#">Media Tools</a></li>
+                    <li><a href="#">Development Tools</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useful Scripts and Miscellanea</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/page-nav.js" defer></script>
+    <script src="../js/toc.js" defer></script>
+    <script src="../js/page-title.js" defer></script>
+    <script src="../js/mathjax-config.js" defer></script>
+</head>
+<body>
+    <div id="nav-container"></div>
+    <main>
+        <h1 data-use-title="full"></h1>
+        
+        <div class="table-of-contents">
+            <ul>
+                <li><strong>On This Page</strong></li>
+                <li><a href="#custom-scripts">Some Scripts</a></li>
+                <li><a href="#productivity">Productivity</a></li>
+                <li><a href="#custom-aliases">Custom Aliases</a></li>
+            </ul>
+        </div>
+        
+        <section id="custom-scripts">
+            <h2>Some Scripts</h2>
+            Armed with the <code>git</code> and the <code>make</code> commands I usually bring with me some useful scripts:
+            <pre><code>
+                git clone https://github.com/giulioiannelli/ubuntu-scripts.git ~/.local/scripts
+                cd ~/.local/scripts
+                make install
+            </code></pre>
+
+            <h3>Disk Space Analyzer</h3>
+            <p>This script helps you identify what's taking up space on your system:</p>
+            <pre><code>#!/bin/bash
+echo "Top 10 directories by size:"
+du -h /var /home /usr --max-depth=2 2>/dev/null | sort -hr | head -n 10</code></pre>
+        </section>
+        
+        <section id="productivity">
+            <h2>Productivity</h2>
+            <h3>Quick Note Taking</h3>
+            <p>A simple script to quickly create timestamped notes:</p>
+            <pre><code>#!/bin/bash
+# Quick note script
+NOTES_DIR="$HOME/Documents/notes"
+mkdir -p "$NOTES_DIR"
+TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+nano "$NOTES_DIR/note_$TIMESTAMP.txt"</code></pre>
+            
+            <h3>Work Timer</h3>
+            <p>A Pomodoro-style timer for productivity:</p>
+            <pre><code>#!/bin/bash
+# Pomodoro timer
+work_minutes=25
+break_minutes=5
+
+echo "Starting a $work_minutes minute work session"
+sleep ${work_minutes}m && notify-send "Break Time!" "Take a $break_minutes minute break" &
+sleep $((work_minutes + break_minutes))m && notify-send "Back to Work!" "Start another session" &</code></pre>
+        </section>
+        
+        <section id="custom-aliases">
+            <h2>Custom Aliases</h2>
+            <p>Useful aliases to add to your <code>.bashrc</code> or <code>.zshrc</code> file:</p>
+            <pre><code># Quick navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias home='cd ~'
+alias dev='cd ~/Development'
+
+# Enhanced commands
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# System commands
+alias update='sudo apt update && sudo apt upgrade -y'
+alias clean='sudo apt autoremove -y && sudo apt clean'
+alias sysinfo='neofetch'
+alias diskspace='du -h --max-depth=1 | sort -hr'</code></pre>
+        </section>
+    </main>
+</body>
+</html>
