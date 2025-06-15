@@ -1,7 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var toggle = document.getElementById('nav-toggle');
-  var menu = document.getElementById('nav-menu');
-  toggle.addEventListener('click', function () {
-    menu.classList.toggle('hidden');
-  });
+  fetch('nav-content.html')
+    .then(response => response.text())
+    .then(html => {
+      const container = document.getElementById('nav-container');
+      container.innerHTML = html;
+      const toggle = container.querySelector('#nav-toggle');
+      const menu = container.querySelector('#nav-menu');
+      toggle.addEventListener('click', function () {
+        menu.classList.toggle('hidden');
+      });
+    });
 });
