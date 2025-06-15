@@ -1,0 +1,47 @@
+/* Code block and inline code styles */
+
+pre {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background-color: var(--code-bg);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  display: block;
+  text-indent: 0;
+  color: inherit;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(110, 118, 129, 0.4);
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #e0e0e0;
+}
+
+/* Reset pre indentation */
+li pre {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Remove extra indentation inside pre */
+pre, pre code {
+  text-indent: 0;
+}
+
+/* Fix multi-line code blocks inside pre elements */
+pre code {
+  display: block;
+}

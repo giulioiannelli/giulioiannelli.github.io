@@ -1,0 +1,10 @@
+/* Blockquote styles */
+
+blockquote {
+  background-color: var(--blockquote-bg);
+  border-left: 3px solid var(--border-color);
+  margin: 1.5rem 0;
+  padding: 1rem;
+  font-style: italic;
+  border-radius: 4px;
+}

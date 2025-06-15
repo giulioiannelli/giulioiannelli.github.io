@@ -1,0 +1,38 @@
+/* Base styles for common elements */
+
+/* Reset some default browser styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Hidden class functionality */
+.hidden {
+  display: block !important;
+}
+
+/* Basic page structure */
+section {
+  margin-bottom: 2rem;
+}
+
+/* Section stylings */
+section h2 {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Page numbering styles */
+.page-number {
+  display: inline-block;
+  font-weight: bold;
+  color: var(--link-color);
+  margin-right: 0.5rem;
+}
+
+/* Dropdown numbering styles */
+.dropdown-number {
+  display: inline-block;
+  font-weight: bold;
+  color: var(--link-color);
+  margin-right: 6px;
+}

@@ -1,0 +1,62 @@
+/* Buttons and interactive elements */
+
+/* Standard buttons */
+button, .button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover, .button:hover {
+  background-color: var(--button-hover);
+  text-decoration: none;
+}
+
+/* Page navigation buttons with theme-aware styling */
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.page-nav a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--button-bg);
+  color: var(--link-color);
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.page-nav a:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-nav a:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.page-nav .prev:before {
+  content: "← ";
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.page-nav .next:after {
+  content: " →";
+  font-size: 1.1em;
+  vertical-align: middle;
+}

@@ -1,0 +1,13 @@
+/* Image styles */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Fix for dotted-border class images */
+img.dotted-border {
+  border-color: var(--link-color);
+}

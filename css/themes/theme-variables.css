@@ -1,0 +1,87 @@
+/* Theme variables */
+
+:root {
+  /* Light theme variables with pastel colors */
+  --light-bg: #f7f7f7;
+  --light-text: #4a4a4a;
+  --light-heading: #333333;
+  --light-link: #7b9ed9;        /* Soft pastel blue */
+  --light-link-hover: #6d8bc3;  /* Slightly darker pastel blue */
+  --light-nav-bg: #ffffff;
+  --light-navbar-bg: #f0f4f8;   /* Very light pastel blue */
+  --light-border: #e1e8ed;
+  --light-code-bg: #f5f7fa;
+  --light-blockquote-bg: #f9f9f9;
+  --light-table-header: #edf2f7;
+  --light-table-alt: #f9f9f9;
+  --light-button-bg: #e2e8f0;   /* Light pastel bluish-gray */
+  --light-button-hover: #cbd5e0; /* Slightly darker pastel bluish-gray */
+  --light-dropdown-bg: #ffffff;
+  --light-dropdown-text: #4a4a4a;
+  --light-dropdown-hover: #f0f4f8; /* Very light pastel blue */
+  --light-dropdown-border: #e1e8ed;
+  
+  /* Dark theme variables with pastel colors */
+  --dark-bg: #1a1a1a;
+  --dark-text: #e0e0e0;
+  --dark-heading: #ffffff;
+  --dark-link: #9db5e9;         /* Pastel blue for dark theme */
+  --dark-link-hover: #b1c3ef;   /* Lighter pastel blue for hover */
+  --dark-nav-bg: #252525;
+  --dark-navbar-bg: #2a2a2a;
+  --dark-border: #3d3d3d;
+  --dark-code-bg: #2d2d2d;
+  --dark-blockquote-bg: #2a2a2a;
+  --dark-table-header: #333333;
+  --dark-table-alt: #252525;
+  --dark-button-bg: #3a3a3a;
+  --dark-button-hover: #4a4a4a;
+  --dark-dropdown-bg: #333333;
+  --dark-dropdown-text: #e0e0e0;
+  --dark-dropdown-hover: #3d3d3d;
+  --dark-dropdown-border: #4a4a4a;
+}
+
+/* Default dark theme */
+:root {
+  --bg-color: var(--dark-bg);
+  --text-color: var(--dark-text);
+  --heading-color: var(--dark-heading);
+  --link-color: var(--dark-link);
+  --link-hover: var(--dark-link-hover);
+  --nav-bg: var(--dark-nav-bg);
+  --navbar-bg: var(--dark-navbar-bg);
+  --border-color: var(--dark-border);
+  --code-bg: var(--dark-code-bg);
+  --blockquote-bg: var(--dark-blockquote-bg);
+  --table-header-bg: var(--dark-table-header);
+  --table-alt-row: var(--dark-table-alt);
+  --button-bg: var(--dark-button-bg);
+  --button-hover: var(--dark-button-hover);
+  --dropdown-bg: var(--dark-dropdown-bg);
+  --dropdown-text: var(--dark-dropdown-text);
+  --dropdown-hover: var(--dark-dropdown-hover);
+  --dropdown-border: var(--dark-dropdown-border);
+}
+
+/* Light theme when data-theme attribute is set to "light" */
+[data-theme="light"] {
+  --bg-color: var(--light-bg);
+  --text-color: var(--light-text);
+  --heading-color: var(--light-heading);
+  --link-color: var(--light-link);
+  --link-hover: var(--light-link-hover);
+  --nav-bg: var(--light-nav-bg);
+  --navbar-bg: var(--light-navbar-bg);
+  --border-color: var(--light-border);
+  --code-bg: var(--light-code-bg);
+  --blockquote-bg: var(--light-blockquote-bg);
+  --table-header-bg: var(--light-table-header);
+  --table-alt-row: var(--light-table-alt);
+  --button-bg: var(--light-button-bg);
+  --button-hover: var(--light-button-hover);
+  --dropdown-bg: var(--light-dropdown-bg);
+  --dropdown-text: var(--light-dropdown-text);
+  --dropdown-hover: var(--light-dropdown-hover);
+  --dropdown-border: var(--light-dropdown-border);
+}
