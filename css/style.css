@@ -11,3 +11,50 @@ nav a {
   text-decoration: none;
   color: #0366d6;
 }
+
+/* Navigation bar and dropdown menu */
+.navbar {
+  background: #f8f8f8;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+#nav-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f8f8f8;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-menu.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #nav-toggle {
+    display: none;
+  }
+  .nav-menu {
+    position: static;
+    flex-direction: row;
+    display: flex;
+    background: transparent;
+    box-shadow: none;
+    width: auto;
+  }
+}
