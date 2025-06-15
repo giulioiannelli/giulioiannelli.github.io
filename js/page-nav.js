@@ -1,6 +1,6 @@
 // Array of pages in the ubuntu section, in order
 const ubuntuPages = [
-  { id: 'index', title: 'Overview', number: '' },
+  { id: 'ubuntu-setup-guide', title: 'Ubuntu Setup Guide', number: '' },
   { id: 'apt', title: 'APT Installs', number: '1' },
   { id: 'dpkg', title: 'DPKG Installs', number: '2' },
   { id: 'snap', title: 'Removing Snap', number: '3' },
@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add page navigation if we're in the ubuntu folder
   const path = window.location.pathname;
   
+  // Only show navigation within the utils/ubuntu pages, not in the main nav bar
   if (path.includes('/utils/ubuntu/')) {
     // Get the current page name by splitting the path
     const pagePath = path.split('/').pop();
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const prevPage = currentIndex > 0 ? ubuntuPages[currentIndex - 1] : null;
       const nextPage = currentIndex < ubuntuPages.length - 1 ? ubuntuPages[currentIndex + 1] : null;
       
-      // Create navigation HTML
+      // Create navigation HTML with theme-aware styling
       let navHTML = '<div class="page-nav">';
       
       // Add previous button if available

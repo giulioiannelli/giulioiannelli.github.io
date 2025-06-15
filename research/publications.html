@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/theme-toggle.js" defer></script>
     <script src="../js/nav.js" defer></script>
     <script src="../js/page-title.js" defer></script>
     <script src="../js/research-nav.js" defer></script>
@@ -13,63 +14,61 @@
 <body>
     <div id="nav-container"></div>
     <main>
-        <h1 data-use-title="full">Publications</h1>
+        <h1 data-use-title="full"></h1>
         
         <div class="publication">
             <h2>Journal Articles</h2>
- <ol class="publication-list" reversed>
+            <ol class="publication-list" reversed>
+                <li>
+                    <a href="https://doi.org/10.1103/PhysRevE.108.054304" class="pub-title">Effect of collaborative-filtering-based recommendation algorithms on opinion polarization</a><br>
+                    <span class="pub-authors">Bellina, A., Castellano, C., Pineau, P., Iannelli, G. & De Marzo, G.</span><br>
+                    <span class="pub-journal">Physical Review E, <b>108</b>, 054304</span>
+                    <p class="pub-abstract">A central role in shaping the experience of users online is played by recommendation algorithms. On the one hand they help retrieving content that best suits users taste, but on the other hand they may give rise to the so-called “filter bubble” effect, favoring the rise of polarization. In the present paper we study how a user-user collaborative-filtering algorithm affects the behavior of a group of agents repeatedly exposed to it. By means of analytical and numerical techniques we show how the system stationary state depends on the strength of the similarity and popularity biases, quantifying respectively the weight given to the most similar users and to the best rated items. In particular, we derive a phase diagram of the model, where we observe three distinct phases: disorder, consensus, and polarization. In the last users spontaneously split into different groups, each focused on a single item. We identify, at the boundary between the disorder and polarization phases, a region where recommendations are nontrivially personalized without leading to filter bubbles. Finally, we show that our model well reproduces the behavior of users on the online music platform last.fm. This analysis paves the way to a systematic analysis of recommendation algorithms by means of statistical physics methods and opens the possibility of devising less polarizing recommendation algorithms.</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1103/PhysRevE.108.054304" class="pub-link">DOI</a> | 
+                        <a href="https://arxiv.org/abs/2303.13270" class="pub-link">arXiv</a> |
+                        <a href="https://arxiv.org/pdf/2303.13270" class="pub-link">PDF</a> 
+                    </div>
+                </li>
+                <li>
+                    <a href="https://doi.org/10.1016/j.physa.2023.128487" class="pub-title">Effect of spatial correlations on Hopfield Neural Network and Dense Associative Memories</a><br>
+                    <span class="pub-authors">De Marzo, G. & Iannelli, G. (2023)</span><br>
+                    <span class="pub-journal">Physica A: Statistical Mechanics and its Applications, <b>612</b>, 128487</span>
+                    <p class="pub-abstract">Hopfield model is one of the few neural networks for which analytical results can be obtained. However, most of them are derived under the assumption of random uncorrelated patterns, while in real life applications data to be stored show non-trivial correlations. In the present paper we study how the retrieval capability of the Hopfield network at null temperature is affected by spatial correlations in the data we feed to it. In particular, we use as patterns to be stored the configurations of a linear Ising model at inverse temperature $\beta$ thus limiting our analysis to exponentially decaying spatial correlations. Exploiting the signal to noise technique we obtain a phase diagram in the load of the Hopfield network and the Ising temperature where a fuzzy phase and a retrieval region can be observed. Remarkably, as the spatial correlation inside patterns is increased, the critical load of the Hopfield network diminishes, a result also confirmed by numerical simulations. The analysis is then generalized to Dense Associative Memories with arbitrary odd-body interactions, for which we obtain analogous results.</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.physa.2023.128487" class="pub-link">DOI</a> | 
+                        <a href="https://arxiv.org/abs/2207.05218" class="pub-link">arXiv</a> |
+                        <a href="https://arxiv.org/pdf/2207.05218" class="pub-link">PDF</a> 
+                    </div>
+                </li>
                     <li>
-                        <a href="https://doi.org/10.1103/PhysRevE.108.054304" class="pub-title">Effect of collaborative-filtering-based recommendation algorithms on opinion polarization</a><br>
-                        <span class="pub-authors">Bellina, A., Castellano, C., Pineau, P., Iannelli, G. & De Marzo, G.</span><br>
-                        <span class="pub-journal">Physical Review E, <b>108</b>, 054304</span>
-                        <p class="pub-abstract">A central role in shaping the experience of users online is played by recommendation algorithms. On the one hand they help retrieving content that best suits users taste, but on the other hand they may give rise to the so-called “filter bubble” effect, favoring the rise of polarization. In the present paper we study how a user-user collaborative-filtering algorithm affects the behavior of a group of agents repeatedly exposed to it. By means of analytical and numerical techniques we show how the system stationary state depends on the strength of the similarity and popularity biases, quantifying respectively the weight given to the most similar users and to the best rated items. In particular, we derive a phase diagram of the model, where we observe three distinct phases: disorder, consensus, and polarization. In the last users spontaneously split into different groups, each focused on a single item. We identify, at the boundary between the disorder and polarization phases, a region where recommendations are nontrivially personalized without leading to filter bubbles. Finally, we show that our model well reproduces the behavior of users on the online music platform last.fm. This analysis paves the way to a systematic analysis of recommendation algorithms by means of statistical physics methods and opens the possibility of devising less polarizing recommendation algorithms.</p>
-                        <div class="pub-links">
-                            <a href="https://doi.org/10.1103/PhysRevE.108.054304" class="pub-link">DOI</a> | 
-                            <a href="https://arxiv.org/abs/2303.13270" class="pub-link">arXiv</a> |
-                            <a href="https://arxiv.org/pdf/2303.13270" class="pub-link">PDF</a> 
-                        </div>
-                    </li>
-                    <li>
-                        <a href="https://doi.org/10.1016/j.physa.2023.128487" class="pub-title">Effect of spatial correlations on Hopfield Neural Network and Dense Associative Memories</a><br>
-                        <span class="pub-authors">De Marzo, G. & Iannelli, G. (2023)</span><br>
-                        <span class="pub-journal">Physica A: Statistical Mechanics and its Applications, <b>612</b>, 128487</span>
-                        <p class="pub-abstract">Hopfield model is one of the few neural networks for which analytical results can be obtained. However, most of them are derived under the assumption of random uncorrelated patterns, while in real life applications data to be stored show non-trivial correlations. In the present paper we study how the retrieval capability of the Hopfield network at null temperature is affected by spatial correlations in the data we feed to it. In particular, we use as patterns to be stored the configurations of a linear Ising model at inverse temperature $\beta$ thus limiting our analysis to exponentially decaying spatial correlations. Exploiting the signal to noise technique we obtain a phase diagram in the load of the Hopfield network and the Ising temperature where a fuzzy phase and a retrieval region can be observed. Remarkably, as the spatial correlation inside patterns is increased, the critical load of the Hopfield network diminishes, a result also confirmed by numerical simulations. The analysis is then generalized to Dense Associative Memories with arbitrary odd-body interactions, for which we obtain analogous results.</p>
-                        <div class="pub-links">
-                            <a href="https://doi.org/10.1016/j.physa.2023.128487" class="pub-link">DOI</a> | 
-                            <a href="https://arxiv.org/abs/2207.05218" class="pub-link">arXiv</a> |
-                            <a href="https://arxiv.org/pdf/2207.05218" class="pub-link">PDF</a> 
-                        </div>
-                    </li>
-                     <li>
-                        <a href="https://doi.org/10.1063/5.0079135" class="pub-title">Filter Bubble effect in the multistate voter model</a><br>
-                        <span class="pub-authors">Iannelli, G., De Marzo, G., & Castellano, C. (2022)</span><br>
-                        <span class="pub-journal">Chaos: An Interdisciplinary Journal of Nonlinear Science, <b>32</b>, 043103</span>
-                        <p class="pub-abstract">Social media influence online activity by recommending to users content strongly correlated with what they have preferred in the past. In this way, they constrain users within filter bubbles strongly limiting their exposure to new or alternative content. We investigate this type of dynamics by considering a multistate voter model where, with a given probability $\lambda$ a user interacts with “personalized information,” suggesting the opinion most frequently held in the past. By means of theoretical arguments and numerical simulations, we show the existence of a nontrivial transition between a region (for small $\lambda$) where a consensus is reached and a region (above a threshold $\lambda_{\rm c}$) where the system gets polarized and clusters of users with different opinions persist indefinitely. The threshold always vanishes for large system size $N$ showing that a consensus becomes impossible for a large number of users. This finding opens new questions about the side effects of the widespread use of personalized recommendation algorithms.</p>
-                        <div class="pub-links">
-                            <a href="https://doi.org/10.1063/5.0079135" class="pub-link">DOI</a> | 
-                            <a href="https://arxiv.org/abs/2202.01137" class="pub-link">arXiv</a> |
-                            <a href="https://arxiv.org/pdf/2202.01137" class="pub-link">PDF</a> 
-                            <!-- <a href="#" class="pub-link">Code</a> -->
-                        </div>
-                    </li>
-                </ol>
+                    <a href="https://doi.org/10.1063/5.0079135" class="pub-title">Filter Bubble effect in the multistate voter model</a><br>
+                    <span class="pub-authors">Iannelli, G., De Marzo, G., & Castellano, C. (2022)</span><br>
+                    <span class="pub-journal">Chaos: An Interdisciplinary Journal of Nonlinear Science, <b>32</b>, 043103</span>
+                    <p class="pub-abstract">Social media influence online activity by recommending to users content strongly correlated with what they have preferred in the past. In this way, they constrain users within filter bubbles strongly limiting their exposure to new or alternative content. We investigate this type of dynamics by considering a multistate voter model where, with a given probability $\lambda$ a user interacts with “personalized information,” suggesting the opinion most frequently held in the past. By means of theoretical arguments and numerical simulations, we show the existence of a nontrivial transition between a region (for small $\lambda$) where a consensus is reached and a region (above a threshold $\lambda_{\rm c}$) where the system gets polarized and clusters of users with different opinions persist indefinitely. The threshold always vanishes for large system size $N$ showing that a consensus becomes impossible for a large number of users. This finding opens new questions about the side effects of the widespread use of personalized recommendation algorithms.</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1063/5.0079135" class="pub-link">DOI</a> | 
+                        <a href="https://arxiv.org/abs/2202.01137" class="pub-link">arXiv</a> |
+                        <a href="https://arxiv.org/pdf/2202.01137" class="pub-link">PDF</a> 
+                        <!-- <a href="#" class="pub-link">Code</a> -->
+                    </div>
+                </li>
+            </ol>
         </div>
         
         <div class="publication">
-            <h2>Conference Proceedings</h2>
+            <h2>Preprints</h2>
             <ol class="publication-list" reversed>
                 <li>
-                    <div class="pub-content">
-                        <a href="#" class="pub-title">"Title of Conference Paper 1"</a><br>
-                        <span class="pub-authors">Iannelli, G., & Author, E. (2024)</span><br>
-                        <span class="pub-journal">Proceedings of the International Conference on Research Topics, pp. 145-152</span>
-                        <p class="pub-abstract">Brief description of the research presented at the conference.</p>
-                        <div class="pub-links">
-                            <a href="#" class="pub-link">PDF</a> | 
-                            <a href="#" class="pub-link">Slides</a> | 
-                            <a href="#" class="pub-link">Code</a>
-                        </div>
-                    </div>
+                    <a href="https://arxiv.org/abs/2504.00144" class="pub-title">Topological Symmetry Breaking in Antagonistic Dynamics</a><br>    
+                    <span class="pub-authors">Iannelli, G., Villegas, P., Gili, T. & Gabrielli, A.</span><br>
+                    <span class="pub-journal">arXiv:2504.00144</span>
+                    <p class="pub-abstract">A dynamic concordia discors, a finely tuned equilibrium between opposing forces, is hypothesized to drive historical transformations. Similarly, a precise interplay of excitation and inhibition, the 80:20 ratio, is at the basis of the normal functionality of neural systems. In artificial neural networks, reinforcement learning allows for fine-tuning internal signed connections, optimizing adaptive responses to complex stimuli, and ensuring robust performance. At present, engineered structures of competing components are, however, largely unexplored, particularly because their emergent phases are closely linked with frustration mechanisms in the hosting network. In this context, the spin glass theory has shown how an apparently uncontrollable non-ergodic chaotic behavior arises from the complex interplay of competing interactions and frustration among units, leading to multiple metastable states preventing the system from exploring all accessible configurations over time. Here, we tackle the problem of disentangling topology and dynamics in systems with antagonistic interactions. We make use of the signed Laplacian operator to demonstrate how fundamental topological defects in lattices and networks percolate, shaping the geometrical arena and complex energy landscape of the system. This unveils novel, highly robust multistable phases and establishes deep connections with spin glasses when thermal noise is considered, providing a natural topological and algebraic description of their still-unknown set of pure states at zero temperature.</p>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2504.00144" class="pub-link">arXiv</a> |
+                        <a href="https://arxiv.org/pdf/2504.00144" class="pub-link">PDF</a>
+                        <!-- <a href="#" class="pub-link">Code</a> -->
+                    </div>      
                 </li>
             </ol>
         </div>

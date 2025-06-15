@@ -1,0 +1,4 @@
+.dotted-border {
+    border-radius: 50%;
+    border: 12px dotted rgb(255, 0, 0);
+}

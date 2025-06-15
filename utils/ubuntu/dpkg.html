@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DPKG Installs</title>
+    <title>DPKG and BASH Installs</title>
     <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/theme-toggle.js" defer></script>
+    <script src="../../js/theme-toggle.js" defer></script>
     <script src="../../js/nav.js" defer></script>
     <script src="../../js/page-nav.js" defer></script>
     <script src="../../js/page-title.js" defer></script>
+    <script src="../../js/sub-toc.js" defer></script>
     <script src="../../js/mathjax-config.js" defer></script>
 </head>
 <body>
@@ -15,15 +18,15 @@
     <main>
         <h1 data-use-title="full"></h1>
         
-        <div class="table-of-contents">
-            <li><strong>On This Page</strong></li>
-            <ul>
-                <li><a href="#web-browsers">Web Browsers</a></li>
-                <li><a href="#development">Development Tools</a></li>
-                <li><a href="#other-apps">Other Applications</a></li>
-            </ul>
+        <!-- Sub-TOC for current page only -->
+        <div id="sub-toc">
+            <!-- This will be filled by sub-toc.js -->
         </div>
         
+        <p>To install packages using DPKG, you can use the following command:</p>
+        <pre>sudo dpkg -i package_name.deb</pre>
+        <p>Make sure to replace <code>package_name.deb</code> with the actual name of the package you want to install.</p>
+
         <section id="web-browsers">
             <h2>Web Browsers</h2>
             <ul>
@@ -36,8 +39,15 @@
             <h2>Development Tools</h2>
             <ul>
                 <li><code>code</code>: Visual Studio Code editor. Visit <a href="https://code.visualstudio.com/">Visual Studio Code</a> for more information.</li>
-                <li><code>sublime-text</code>: A sophisticated text editor for code, markup, and prose.</li>
-                <li><code>postman</code>: API platform for building and using APIs.</li>
+                <li>
+                    <code>conda</code>: Anaconda package manager for Python. Visit <a href="https://www.anaconda.com/">Anaconda</a> for more information.
+                    In this case we need to run a <code>.sh</code> script so after downloading an installer such as <code>Anaconda3-&lt;version&gt;-Linux-x86_64.sh</code> just make it executable with
+                    <pre>chmod +x Anaconda3-&lt;version&gt;-Linux-x86_64.sh</pre>
+                    and then run it with
+                    <pre>./Anaconda3-&lt;version&gt;-Linux-x86_64.sh</pre>
+                    If you want to install it in a specific directory, you can specify the path during the installation process, but at the end you would need to add the Anaconda path to your <code>.bashrc</code> file:
+                    <pre>export PATH="/path/to/anaconda3/bin:$PATH"</pre>
+                </li>
             </ul>
         </section>
         
@@ -46,7 +56,6 @@
             <ul>
                 <li><code>slack-desktop</code>: Team collaboration tool.</li>
                 <li><code>discord</code>: Voice, video, and text communication service.</li>
-                <li><code>gimp</code>: GNU Image Manipulation Program for image editing.</li>
             </ul>
         </section>
     </main>

@@ -1,5 +1,130 @@
-/* Global site styles */
+/* Theme variables */
 
+:root {
+  /* Light theme variables with pastel colors */
+  --light-bg: #f7f7f7;
+  --light-text: #4a4a4a;
+  --light-heading: #333333;
+  --light-link: #7b9ed9;        /* Soft pastel blue */
+  --light-link-hover: #6d8bc3;  /* Slightly darker pastel blue */
+  --light-nav-bg: #ffffff;
+  --light-navbar-bg: #f0f4f8;   /* Very light pastel blue */
+  --light-border: #e1e8ed;
+  --light-code-bg: #f5f7fa;
+  --light-blockquote-bg: #f9f9f9;
+  --light-table-header: #edf2f7;
+  --light-table-alt: #f9f9f9;
+  --light-button-bg: #e2e8f0;   /* Light pastel bluish-gray */
+  --light-button-hover: #cbd5e0; /* Slightly darker pastel bluish-gray */
+  --light-dropdown-bg: #ffffff;
+  --light-dropdown-text: #4a4a4a;
+  --light-dropdown-hover: #f0f4f8; /* Very light pastel blue */
+  --light-dropdown-border: #e1e8ed;
+  
+  /* Dark theme variables with pastel colors */
+  --dark-bg: #1a1a1a;
+  --dark-text: #e0e0e0;
+  --dark-heading: #ffffff;
+  --dark-link: #9db5e9;         /* Pastel blue for dark theme */
+  --dark-link-hover: #b1c3ef;   /* Lighter pastel blue for hover */
+  --dark-nav-bg: #252525;
+  --dark-navbar-bg: #2a2a2a;
+  --dark-border: #3d3d3d;
+  --dark-code-bg: #2d2d2d;
+  --dark-blockquote-bg: #2a2a2a;
+  --dark-table-header: #333333;
+  --dark-table-alt: #252525;
+  --dark-button-bg: #3a3a3a;
+  --dark-button-hover: #4a4a4a;
+  --dark-dropdown-bg: #333333;
+  --dark-dropdown-text: #e0e0e0;
+  --dark-dropdown-hover: #3d3d3d;
+  --dark-dropdown-border: #4a4a4a;
+}
+
+/* Default dark theme */
+:root {
+  --bg-color: var(--dark-bg);
+  --text-color: var(--dark-text);
+  --heading-color: var(--dark-heading);
+  --link-color: var(--dark-link);
+  --link-hover: var(--dark-link-hover);
+  --nav-bg: var(--dark-nav-bg);
+  --navbar-bg: var(--dark-navbar-bg);
+  --border-color: var(--dark-border);
+  --code-bg: var(--dark-code-bg);
+  --blockquote-bg: var(--dark-blockquote-bg);
+  --table-header-bg: var(--dark-table-header);
+  --table-alt-row: var(--dark-table-alt);
+  --button-bg: var(--dark-button-bg);
+  --button-hover: var(--dark-button-hover);
+  --dropdown-bg: var(--dark-dropdown-bg);
+  --dropdown-text: var(--dark-dropdown-text);
+  --dropdown-hover: var(--dark-dropdown-hover);
+  --dropdown-border: var(--dark-dropdown-border);
+}
+
+/* Light theme when data-theme attribute is set to "light" */
+[data-theme="light"] {
+  --bg-color: var(--light-bg);
+  --text-color: var(--light-text);
+  --heading-color: var(--light-heading);
+  --link-color: var(--light-link);
+  --link-hover: var(--light-link-hover);
+  --nav-bg: var(--light-nav-bg);
+  --navbar-bg: var(--light-navbar-bg);
+  --border-color: var(--light-border);
+  --code-bg: var(--light-code-bg);
+  --blockquote-bg: var(--light-blockquote-bg);
+  --table-header-bg: var(--light-table-header);
+  --table-alt-row: var(--light-table-alt);
+  --button-bg: var(--light-button-bg);
+  --button-hover: var(--light-button-hover);
+  --dropdown-bg: var(--light-dropdown-bg);
+  --dropdown-text: var(--light-dropdown-text);
+  --dropdown-hover: var(--light-dropdown-hover);
+  --dropdown-border: var(--light-dropdown-border);
+}
+
+/* Base styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: none;
+}
+
+main a:not(.page-nav a):not(nav a) {
+  border-bottom: 1px dotted var(--link-color);
+  padding-bottom: 1px;
+}
+
+main a:hover:not(.page-nav a):not(nav a) {
+  border-bottom: 1px solid var(--link-hover);
+}
+
+/* Navigation styles */
 nav ul {
   list-style: none;
   padding: 0;
@@ -9,22 +134,18 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #0366d6;
-}
-
-/* Body and text styles */
-body {
-  background-color: lightblue;
+  color: var(--link-color);
 }
 
 /* Navigation bar and dropdown menu */
 .navbar {
-  background: #f8f8f8;
+  background: var(--navbar-bg);
   padding: 0.5rem 1rem;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
 }
 
 #nav-toggle {
@@ -62,11 +183,130 @@ body {
   }
 }
 
+/* Content containers */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 /* Table of Contents styles */
 .table-of-contents {
   margin-bottom: 2rem;
 }
 
+/* Sub TOC styles */
+#sub-toc {
+  background-color: var(--blockquote-bg);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--link-color);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+
+#sub-toc h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--heading-color);
+}
+
+#sub-toc ol {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+#sub-toc ol ol {
+  padding-left: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+#sub-toc li {
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+}
+
+#sub-toc a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+#sub-toc a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* TOC specific styles */
+#toc > ol {
+  counter-reset: section;
+  list-style-type: none;
+  padding-left: 0;
+  background-color: var(--blockquote-bg);
+  padding: 1rem;
+  border-radius: 5px;
+  border-left: 3px solid var(--link-color);
+}
+
+#toc > ol > li {
+  counter-increment: section;
+  margin-bottom: 1rem;
+}
+
+#toc > ol > li > a {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--link-color);
+}
+
+#toc > ol > li > a::before {
+  content: counter(section) ". ";
+  font-weight: bold;
+}
+
+#toc > ol > li > ol {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  list-style-type: none;
+}
+
+#toc .section-number {
+  color: #555;
+  font-weight: normal;
+  margin-right: 0.25rem;
+}
+
+#toc ol {
+  margin-bottom: 0.5rem;
+}
+
+#toc > ol > li > ol > li {
+  margin-bottom: 0.25rem;
+}
+
+#toc a {
+  text-decoration: none;
+  color: #0366d6;
+}
+
+#toc a:hover {
+  text-decoration: underline;
+}
+
+/* Hide empty lists in TOC */
+#toc ol:empty {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fix specific TOC entries */
+#toc h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Original TOC styles */
 .table-of-contents h2 {
   margin-top: 0;
   font-size: 1.25rem;
@@ -365,4 +605,257 @@ a.pub-title:hover {
 
 .highlight-item a:hover {
   text-decoration: underline;
+}
+
+/* Code blocks */
+pre {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background-color: var(--code-bg);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  display: block;
+  text-indent: 0;
+  color: inherit;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(110, 118, 129, 0.4);
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #e0e0e0;
+}
+
+/* Publication styles */
+.publication {
+  margin-bottom: 2.5rem;
+}
+
+.publication-list {
+  padding-left: 1.5rem;
+}
+
+.publication-list li {
+  margin-bottom: 1.5rem;
+}
+
+.pub-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--link-color);
+}
+
+.pub-authors {
+  display: block;
+  margin: 0.5rem 0;
+  font-style: italic;
+}
+
+.pub-journal {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+}
+
+.pub-abstract {
+  background-color: var(--blockquote-bg);
+  border-left: 3px solid var(--border-color);
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  border-radius: 4px;
+}
+
+.pub-links {
+  margin-top: 0.5rem;
+}
+
+.pub-link {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: var(--link-color);
+  font-size: 0.9rem;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--table-header-bg);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+  text-align: left;
+  color: var(--heading-color);
+}
+
+td {
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-alt-row);
+}
+
+/* Buttons */
+button, .button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover, .button:hover {
+  background-color: var(--button-hover);
+  text-decoration: none;
+}
+
+/* Blockquotes */
+blockquote {
+  background-color: var(--blockquote-bg);
+  border-left: 3px solid var(--border-color);
+  margin: 1.5rem 0;
+  padding: 1rem;
+  font-style: italic;
+  border-radius: 4px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Fix for dotted-border class images */
+img.dotted-border {
+  border-color: var(--link-color);
+}
+
+/* Form elements */
+input, textarea, select {
+  background-color: var(--blockquote-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.5rem;
+  color: var(--text-color);
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--link-color);
+}
+
+/* Reset pre indentation */
+li pre {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Remove extra indentation inside pre */
+pre, pre code {
+  text-indent: 0;
+}
+
+/* Fix multi-line code blocks inside pre elements */
+pre code {
+  display: block;
+}
+
+/* Theme toggle button */
+.theme-toggle-btn {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  margin-left: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.theme-toggle-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Page navigation buttons with theme-aware styling */
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.page-nav a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--button-bg);
+  color: var(--link-color);
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.page-nav a:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-nav a:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.page-nav .prev:before {
+  content: "← ";
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.page-nav .next:after {
+  content: " →";
+  font-size: 1.1em;
+  vertical-align: middle;
 }

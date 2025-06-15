@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APT Installs</title>
     <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/theme-toggle.js" defer></script>
+    <script src="../../js/theme-toggle.js" defer></script>
     <script src="../../js/nav.js" defer></script>
     <script src="../../js/page-nav.js" defer></script>
     <script src="../../js/page-title.js" defer></script>
+    <script src="../../js/sub-toc.js" defer></script>
     <script src="../../js/mathjax-config.js" defer></script>
 </head>
 <body>
     <div id="nav-container"></div>
-    <main>
+    <!--  -->
+    <main>      
         <h1 data-use-title="full"></h1>
         
-        <div class="table-of-contents">
-            <ul>
-                <li><strong>Overview</strong></li>
-                <li><a href="#essential-tools">Essential Tools</a></li>
-                <li><a href="#media-tools">Media Tools</a></li>
-                <li><a href="#development-tools">Development Tools</a></li>
-            </ul>
+        <!-- Sub-TOC for current page only -->
+        <div id="sub-toc">
+            <!-- This will be filled by sub-toc.js -->
         </div>
-        
+            
         <section id="essential-tools">
             <h2>Essential Tools</h2>
             <ul>
@@ -34,7 +34,7 @@
                 <li><code>curl</code>: Command-line tool for transferring data with URLs.</li>
             </ul>
         </section>
-        
+            
         <section id="media-tools">
             <h2>Media Tools</h2>
             <ul>
@@ -43,7 +43,7 @@
                 <li><code>ffmpeg</code>: Complete solution to record, convert and stream audio and video.</li>
             </ul>
         </section>
-        
+            
         <section id="development-tools">
             <h2>Development Tools</h2>
             <ul>
@@ -53,6 +53,8 @@
                 <li><code>nodejs</code>: JavaScript runtime built on Chrome's V8 JavaScript engine.</li>
             </ul>
         </section>
+
+        <script src="../../js/toc.js"></script>
     </main>
 </body>
 </html>
