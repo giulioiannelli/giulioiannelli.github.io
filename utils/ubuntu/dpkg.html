@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base-url" content="">
     <title>DPKG and BASH Installs</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <script src="../../js/theme-toggle.js" defer></script>
-    <script src="../../js/theme-toggle.js" defer></script>
-    <script src="../../js/nav.js" defer></script>
-    <script src="../../js/page-nav.js" defer></script>
-    <script src="../../js/page-title.js" defer></script>
-    <script src="../../js/sub-toc.js" defer></script>
-    <script src="../../js/mathjax-config.js" defer></script>
+    <script src="/js/utils/base-url.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/theme-toggle.js" defer></script>
+    <script src="/js/nav.js" defer></script>
+    <script src="/js/page-nav.js" defer></script>
+    <script src="/js/page-title.js" defer></script>
+    <script src="/js/sub-toc.js" defer></script>
+    <script src="/js/mathjax-config.js" defer></script>
+    <link rel="stylesheet" href="/assets/highlight-js/styles/github-dark.min.css">
+    <script src="/assets/highlight-js/highlight.min.js"></script>
+    <!-- Load common language support -->
+    <script src="/assets/highlight-js/languages/python.min.js"></script>
+    <script src="/assets/highlight-js/languages/javascript.min.js"></script>
+    <script src="/assets/highlight-js/languages/bash.min.js"></script>
+    <script src="/assets/highlight-js/languages/xml.min.js"></script>
+    <script src="/assets/highlight-js/languages/css.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            hljs.highlightAll();
+        });
+    </script>
 </head>
 <body>
     <div id="nav-container"></div>
@@ -58,6 +72,11 @@
                 <li><code>discord</code>: Voice, video, and text communication service.</li>
             </ul>
         </section>
+
+<pre><code class="language-python">
+def foo():
+    return 42
+</code></pre>
     </main>
 </body>
 </html>

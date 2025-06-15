@@ -83,6 +83,15 @@ function createNavigation() {
   navbar.appendChild(navMenu);
   navbar.appendChild(themeToggle);
   
+  // Check for old inline navigation styles and remove them
+  const inlineStyles = document.querySelectorAll('style');
+  inlineStyles.forEach(style => {
+    if (style.textContent.includes('.navbar') || style.getAttribute('data-inline-nav')) {
+      console.log("Removing old inline navigation styles");
+      style.remove();
+    }
+  });
+  
   // Add navbar to the page
   let navContainer = document.getElementById('nav-container');
   if (navContainer) {
