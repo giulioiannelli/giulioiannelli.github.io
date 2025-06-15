@@ -30,5 +30,23 @@
             <li><code>htop</code>, <code>bpytop</code>: Interactive process viewer for Unix systems.</li>
             <li><code>neofetch</code>: Displays system information in a visually appealing way.</li>
             <li><code>caffeine</code>: Prevents the system from going to sleep or activating the screensaver.</li>
+            <li><code>make</code>: Utility for managing build automation.</li>
+            <li><code>vlc</code>: Media player that supports various audio and video formats.</li>
+            <li><code>handbrake</code>: Open-source transcoder for digital video and audio files.</li>
         </body>
+    </section>
+    <section>
+        <h2>Getting rid of <code>snap</code></h2>
+        <p>To remove <code>snap</code> and its associated packages, you can run the following commands:</p>
+        <pre><code>sudo apt purge snapd
+        sudo rm -rf /var/cache/snapd
+        sudo rm -rf ~/snap</code></pre>
+        <p>After running these commands, you can install your preferred applications using <code>apt</code> or other package managers.</p>
+    </section>
+    <section>
+        <h2><code>dpkg</code> installs</h2>
+        <ul>
+            <li><code>google-chrome-stable</code>: Web browser from Google. Visit <a href="https://www.google.com/chrome/">Google Chrome</a> for more information.</li>
+            <li><code>code</code>: Visual Studio Code editor. Visit <a href="https://code.visualstudio.com/">Visual Studio Code</a> for more information.</li>
+
 </html>
