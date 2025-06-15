@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Get current path to handle relative links correctly
   const path = window.location.pathname;
-  const isInSubfolder = path.includes('/ubuntu/') || path.includes('/research/');
-  const rootPrefix = isInSubfolder ? '../' : '';
+  const isInUtilsUbuntu = path.includes('/utils/ubuntu/');
+  const isInUtils = path.includes('/utils/') && !isInUtilsUbuntu;
+  const isInResearch = path.includes('/research/');
+  const isInSubfolder = isInUtilsUbuntu || isInResearch || isInUtils;
+  const rootPrefix = isInUtilsUbuntu ? '../../' : (isInResearch || isInUtils ? '../' : '');
   
   // Dropdown CSS for navigation
   const navCSS = `
@@ -77,12 +80,19 @@ document.addEventListener('DOMContentLoaded', function() {
         </li>
         <li><a href="${rootPrefix}projects.html" style="text-decoration: none; color: #0366d6; font-weight: bold;">Projects</a></li>
         <li class="nav-dropdown">
-          <a href="${rootPrefix}ubuntu/index.html" style="text-decoration: none; color: #0366d6; font-weight: bold;">Ubuntu Setting</a>
+          <a href="${rootPrefix}utils/index.html" style="text-decoration: none; color: #0366d6; font-weight: bold;">Utils</a>
+          <div class="dropdown-content">
+            <a href="${rootPrefix}utils/ubuntu/index.html">Ubuntu Setting</a>
+            <!-- More utility sections can be added here in the future -->
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="${rootPrefix}utils/ubuntu/index.html" style="text-decoration: none; color: #0366d6; font-weight: bold;">Ubuntu Setting</a>
           <div class="dropdown-content ubuntu-dropdown">
-            <a href="${rootPrefix}ubuntu/apt.html"><span class="dropdown-number">1.</span> APT Installs</a>
-            <a href="${rootPrefix}ubuntu/dpkg.html"><span class="dropdown-number">2.</span> DPKG Installs</a>
-            <a href="${rootPrefix}ubuntu/snap.html"><span class="dropdown-number">3.</span> Removing Snap</a>
-            <a href="${rootPrefix}ubuntu/scripts.html"><span class="dropdown-number">4.</span> Useful Scripts</a>
+            <a href="${rootPrefix}utils/ubuntu/apt.html"><span class="dropdown-number">1.</span> APT Installs</a>
+            <a href="${rootPrefix}utils/ubuntu/dpkg.html"><span class="dropdown-number">2.</span> DPKG Installs</a>
+            <a href="${rootPrefix}utils/ubuntu/snap.html"><span class="dropdown-number">3.</span> Removing Snap</a>
+            <a href="${rootPrefix}utils/ubuntu/scripts.html"><span class="dropdown-number">4.</span> Useful Scripts</a>
           </div>
         </li>
         <li><a href="${rootPrefix}contact.html" style="text-decoration: none; color: #0366d6; font-weight: bold;">Contact</a></li>

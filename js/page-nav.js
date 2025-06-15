@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add page navigation if we're in the ubuntu folder
   const path = window.location.pathname;
   
-  if (path.includes('/ubuntu/')) {
+  if (path.includes('/utils/ubuntu/')) {
     // Get the current page name by splitting the path
     const pagePath = path.split('/').pop();
     const currentPage = pagePath.replace('.html', '');
